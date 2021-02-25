@@ -5,17 +5,13 @@ const Product = ({ product }) => {
   return (
     <div className='card border-0 card-overlay'>
       <Link to={`/products/${product._id}`}>
-        <img
-          src={product.imagen}
-          alt={product.titulo}
-          className='overlay-img'
-        />
+        <img src={product.image} alt={product.name} className='overlay-img' />
         <div className='overlay'>
           <div className='overlay-titulo'>
-            <h5>{product.titulo}</h5>
+            <h5>{product.name}</h5>
           </div>
           <div className='overlay-precio'>
-            <p>{`$${product.precio}`}</p>
+            <p>{`$${product.price}`}</p>
           </div>
         </div>
       </Link>

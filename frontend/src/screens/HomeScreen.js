@@ -10,13 +10,13 @@ const HomeScreen = () => {
       <Navbar />
       <Header />
 
-      <ProductsBanner product={'cakes'} titulo={'Tortas'} />
+      <ProductsBanner product={'cakes'} title={'Tortas'} />
       <ProductsList show={'cakes'} />
 
-      <ProductsBanner product={'cupcakes'} titulo={'Mix de Cupcakes'} />
+      <ProductsBanner product={'cupcakes'} title={'Mix de Cupcakes'} />
       <ProductsList show={'cupcakes'} />
 
-      <ProductsBanner product={'cookies'} titulo={'Cookies'} />
+      <ProductsBanner product={'cookies'} title={'Cookies'} />
       <ProductsList show={'cookies'} />
     </div>
   );

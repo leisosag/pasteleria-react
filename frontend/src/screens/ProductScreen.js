@@ -22,25 +22,25 @@ const ProductScreen = ({ match }) => {
       <div className='container mt-4'>
         <div className='row justify-content-center py-5'>
           <div className='col-xs-12 col-lg-2 d-flex flex-column'>
-            <img src={product.imagen2} alt='' className='img-fluid mb-3' />
-            <img src={product.imagen3} alt='' className='img-fluid mb-3' />
-            <img src={product.imagen4} alt='' className='img-fluid mb-3' />
+            <img src={product.image2} alt='' className='img-fluid mb-3' />
+            <img src={product.image3} alt='' className='img-fluid mb-3' />
+            <img src={product.image4} alt='' className='img-fluid mb-3' />
           </div>
 
           <div className='col-xs-12 col-lg-6 mt-2'>
-            <img src={product.imagen} alt='' className='img-fluid' />
+            <img src={product.image} alt='' className='img-fluid' />
           </div>
 
           <div className='col-xs-12 col-lg-4 mt-2 d-flex flex-column justify-content-around'>
             <div className='row'>
               <div className='col-xs-12'>
-                <h1 className='titulo-producto pb-3'>{product.titulo}</h1>
-                <span className='span-precio'>{`$${product.precio}`}</span>
+                <h1 className='titulo-producto pb-3'>{product.name}</h1>
+                <span className='span-precio'>{`$${product.price}`}</span>
                 <p className='descripcion-producto pt-3'>
-                  {product.descripcion}
+                  {product.description}
                 </p>
 
-                {product.diametro ? (
+                {product.size ? (
                   <div className='d-flex flex-column pt-3'>
                     <label className='details-label' for='size'>
                       Diámetro
@@ -50,15 +50,11 @@ const ProductScreen = ({ match }) => {
                       className='form-select form-select-lg p-2'
                       aria-label='.form-select-lg example'
                     >
-                      <option selected value={product.diametro[0]}>
-                        {product.diametro[0]}
+                      <option selected value={product.size[0]}>
+                        {product.size[0]}
                       </option>
-                      <option value={product.diametro[1]}>
-                        {product.diametro[1]}
-                      </option>
-                      <option value={product.diametro[1]}>
-                        {product.diametro[2]}
-                      </option>
+                      <option value={product.size[1]}>{product.size[1]}</option>
+                      <option value={product.size[1]}>{product.size[2]}</option>
                     </select>
                   </div>
                 ) : null}
@@ -100,11 +96,11 @@ const ProductScreen = ({ match }) => {
                         aria-labelledby='headingOne'
                         data-parent='#accordion'
                       >
-                        <div className='card-body'>{product.ingredientes}</div>
+                        <div className='card-body'>{product.ingredients}</div>
                       </div>
                     </div>
 
-                    {product.porciones ? (
+                    {product.portions ? (
                       <div className='card card-accordion'>
                         <div
                           className='card-header d-flex align-items-center justify-content-between'
@@ -131,7 +127,7 @@ const ProductScreen = ({ match }) => {
                           data-parent='#accordion'
                         >
                           <div className='card-body'>
-                            {product.porciones.map((porc) => (
+                            {product.portions.map((porc) => (
                               <p>{porc}</p>
                             ))}
                           </div>
