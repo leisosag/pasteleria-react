@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Product from './Product.js';
-import products from '../products.js';
+//import products from '../products.js';
 
 const ProductsList = ({ show }) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get('/api/products');
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
   let someProducts = [];
 
   if (show === 'cakes') {
-    someProducts = products.slice(0, 12);
+    someProducts = products.slice(6, 10);
   }
   if (show === 'cupcakes') {
-    someProducts = products.slice(12, 17);
+    someProducts = products.slice(12, 16);
   }
   if (show === 'cookies') {
     someProducts = products.slice(17, 18);

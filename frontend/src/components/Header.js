@@ -9,17 +9,19 @@ const Header = () => {
             <source
               media='(min-width:401px)'
               srcSet='/images/background-big.jpg'
+              alt='header'
             />
             <source
               media='(max-width:400px)'
               srcSet='/images/background-tall.jpg'
+              alt='header'
             />
-            <img src='/images/background-small.jpg' />
+            <img src='/images/background-small.jpg' alt='header' />
           </picture>
           <div className='header-texto mt-5'>
             <h1 className='text-white'>Compartir Pastelería</h1>
             <p>Tortas y algo más...</p>
-            <a href='/'>
+            <a href='/products'>
               <button className='btn btn-cta btn-color mr-3 mt-3'>
                 Ver productos
               </button>

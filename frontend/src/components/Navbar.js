@@ -43,13 +43,13 @@ const Navbar = () => {
             id='navbarNavAltMarkup'
           >
             <div className='navbar-nav ml-auto'>
-              <Link className='nav-link mr-2' to={`/`}>
+              <Link className='nav-link mr-2' to={`/products`}>
                 <i className='fas fa-birthday-cake mr-1'></i>Productos
               </Link>
-              <Link className='nav-link mr-2' to={`/`}>
+              <Link className='nav-link mr-2' to={`/cart`}>
                 <i className='fas fa-shopping-cart mr-1'></i>Carrito
               </Link>
-              <Link className='nav-link mr-2' to={`/`}>
+              <Link className='nav-link mr-2' to={`/signin`}>
                 <i className='fas fa-user mr-1'></i>Sign In
               </Link>
             </div>
